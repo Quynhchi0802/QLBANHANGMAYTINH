@@ -157,6 +157,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="HAnh\anh1.jpg" />
+    <Content Include="HAnh\anh2.jpg" />
+    <Content Include="HAnh\anh3.jpg" />
+    <Content Include="HAnh\chou.jpg" />
+    <Content Include="HAnh\iconkinhlup.png" />
+    <Content Include="HAnh\nên.jpg" />
+    <Content Include="nivoslider\jquery.nivo.slider.js" />
+    <Content Include="nivoslider\jquery.nivo.slider.pack.js" />
+    <Content Include="nivoslider\nivo-slider.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />

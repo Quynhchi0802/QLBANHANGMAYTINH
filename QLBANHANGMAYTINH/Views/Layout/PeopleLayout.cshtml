@@ -7,116 +7,143 @@
     <link href="~/Content/PeopleCssLayout/fonts.css" rel="stylesheet" />
     <link href="~/Content/PeopleCssLayout/screen.css" rel="stylesheet" />
     <link href="~/Content/PeopleCssLayout/PeopleCss.css" rel="stylesheet" />
+    @*chèn link nivoslider*@
+    <link rel="stylesheet" href="../themes/default/default.css" type="text/css" media="screen" />
+
+    <link rel="stylesheet" href="../nivo-slider.css" type="text/css" media="screen" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.nivo.slider.js"></script>
+    
 </head>
 
 <body>
     @RenderBody()
-   
     <div id="Tong">
-    <section class="blank">
-        <div class="flash">
-            @* Tạo thẻ div cho người dùng đăng ký đăng nhập *@
-           <div class="DangkyDangnhap">
-                @Html.ActionLink("Đăng Nhập", "DangNhap" ,null, htmlAttributes: new {@class="DangNhap"})
-                @Html.ActionLink("Đăng Ký", "DangKy" ,null, htmlAttributes: new {@class="DangKy"})
+        <section class="blank">
+            <div class="flash">
+                @* Tạo thẻ div cho người dùng đăng ký đăng nhập *@
+                <div class="DangkyDangnhap">
+                    @Html.ActionLink("Đăng Nhập", "DangNhap", null, htmlAttributes: new { @class = "DangNhap" })
+                    @Html.ActionLink("Đăng Ký", "DangKy", null, htmlAttributes: new { @class = "DangKy" })
                 </div>
+            </div>
+
+            @*tạo thanh menu*@
+            <div class="flash success" id="divDanhMuc">
+                <div id="txtTimKiem">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.TextBox("txtTimKiem", "", "", htmlAttributes: new { @class = "TextBoxTimKiem", @placeholder = "Tìm kiếm trên trang..." })
+                        <div id="divNutTimKiem">
+                            <button type="submit"><img src="~/HAnh/iconkinhlup.png" />
+                            </button>
+                            </div>
+                    }
+                </div>
+                <ul class="navMenu">
+                    <li>
+                        <a href="#"> Trang chủ</a>
+                    </li>
+                    <li>
+                        <a href="#"> Liên hệ</a>
+                    </li>
+                    <li>
+                        <a href="#"> Hướng dẫn</a>
+                    </li>
+                    <li>
+                        <a href="#"> Phân loại máy tính </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div id="divmenuTrai">
+                <div class="activity">
+
+                    <h1 class="item-header">Sản phẩm mới </h1>
+
+                    <div class="activity-list-update">
+                        <img src="http://lorempixel.com/50/50/" alt="Image">
+                        <span>Dell</span>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="activity-list-update">
+                        <img src="http://lorempixel.com/50/50/" alt="Image">
+                        <span>Macbook</span>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="activity-list-update">
+                        <img src="http://lorempixel.com/50/50/" alt="Image">
+                        <span>HP</span>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="activity-list-update">
+                        <img src="http://lorempixel.com/50/50/" alt="Image">
+                        <span>Lenovo</span>
+                        <div class="clear"></div>
+                    </div>
+
+
+                    
+                </div>
+            </div>
+            <div id="slider" class="nivoSlider">
+                <h1 class="text">Chou Store</h1>
+                <img src="~/HAnh/chou.jpg" />
+                
+            </div>
+            <div style="clear:both"></div>
+
+        </section>
+        <section>
+            <div>
+                <a href="#" class="button">This is a button</a>
+
+                <a href="#" class="button button-submit">This is a save button</a>
+
+                <a href="#" class="button">Button with a counter <span class="notification">22</span></a>
+
+                <a href="#" class="button button-and-icon">
+                    <div><i class="icon-large icon-cog"></i></div>Button with an icon
+                </a>
+            </div>
+
+            <hr>
+
            
 
-        <div class="flash success" id="divDanhMuc">
-            <ul class="navMenu">
-                <li>
-                    <a href="#">, Trang chủ</a>
-                </li>
-                <li>
-                    <a href="#">, Liên hệ</a>
-                </li>
-                <li>
-                    <a href="#">,Hướng dẫn</a>
-                </li>
-                <li>
-                    <a href="#">, Phân loại máy tính </a>
-                </li>
-            </ul>
-        </div>
-    </section>
+            <hr>
 
-    <section>
-        <div class="activity">
-            <h1 class="item-header">Recent Activity</h1>
 
-            <div class="activity-list-update">
-                <img src="http://lorempixel.com/50/50/" alt="Image">
-                <p><strong>Dennis The Dude</strong> updated his <a href="#">user profile</a>.</p>
-                <div class="clear"></div>
+        </section>
+
+        <section class="blank items">
+            <div class="item">
+                <img src="http://lorempixel.com/400/300/" alt="Image">
+
+                <div class="item-info">
+                    <h1>Item title</h1>
+                    <p>What the hell is this? Get out of town, I didn't know you did anything creative. Ah, let me read some.</p>
+                    <span class="price">£49.99</span>
+                    <a href="#" class="button button-buy">Get it now</a>
+                </div>
             </div>
-
-            <div class="activity-list-update">
-                <img src="http://lorempixel.com/50/50/" alt="Image">
-                <p><strong>Abe Kobo</strong> uploaded a new file <a href="#">new-design.png</a></p>
-                <div class="clear"></div>
+            <div>
+                <a href="#" class="button button-buy">Buy button (full width for columns)</a>
             </div>
-
-            <div class="activity-list-update">
-                <img src="http://lorempixel.com/50/50/" alt="Image">
-                <p><strong>Abe Kobo</strong> uploaded a new file <a href="#">new-design.png</a></p>
-                <div class="clear"></div>
-            </div>
-
-            <a href="#" class="item-footer green">
-                See all activity
-            </a>
-        </div>
-    </section>
-
-    <section>
-        <div>
-            <a href="#" class="button">This is a button</a>
-
-            <a href="#" class="button button-submit">This is a save button</a>
-
-            <a href="#" class="button">Button with a counter <span class="notification">22</span></a>
-
-            <a href="#" class="button button-and-icon">
-                <div><i class="icon-large icon-cog"></i></div>Button with an icon
-            </a>
-        </div>
-
-        <hr>
-
-        <div>
-            <a href="#" class="button button-submit">Submit</a>
-            <a href="#" class="button button-cancel">Cancel</a>
-            <a href="#" class="button button-delete">Delete</a>
-        </div>
-
-        <hr>
-
-        <div>
-            <a href="#" class="button button-small">Smaller button</a>
-        </div>
-
-        <hr>
-
-        
-    </section>
-
-    <section class="blank items">
-        <div class="item">
-            <img src="http://lorempixel.com/400/300/" alt="Image">
-
-            <div class="item-info">
-                <h1>Item title</h1>
-                <p>What the hell is this? Get out of town, I didn't know you did anything creative. Ah, let me read some.</p>
-                <span class="price">£49.99</span>
-                <a href="#" class="button button-buy">Get it now</a>
-            </div>
-        </div>
-        <div>
-            <a href="#" class="button button-buy">Buy button (full width for columns)</a>
-        </div>
-    </section>
+        </section>
 
     </div>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#slider').nivoSlider();
+        });
+    </script>
     
+   
+
 </body>
 </html>
